@@ -1,0 +1,196 @@
+Departamento,Provincia,Internet,Agua,Electricidad,Educación,Pobreza extrema
+Amazonas,Chachapoyas,10.86,92.05,87.49,35.32,11.69
+Amazonas,Bagua,4.66,75.77,67.64,35.15,23.06
+Amazonas,Bongara,3.00,91.50,82.44,30.93,10.74
+Amazonas,Condorcanqui,0.58,84.36,18.44,42.19,38.14
+Amazonas,Luya,02.05,85.44,85.33,32.81,24.99
+Amazonas,Rodríguez de Mendoza,2.13,86.59,77.44,30.59,13.32
+Amazonas,Utcubamba,4.46,56.34,80.77,33.90,12.19
+Ánchaz,Huaraz,25.72,89.64,89.66,35.92,3.12
+Ánchaz,Aija,3.14,92.61,78.72,30.98,12.81
+Ánchaz,Antonio Raymondi,0.76,82.78,81.59,38.43,21.31
+Ánchaz,Asunción,1.82,91.34,88.27,33.10,7.81
+Ánchaz,Bolognesi,2.55,89.44,78.84,30.08,4.79
+Ánchaz,Carhuaz,7.28,90.63,79.58,30.60,10.86
+Ánchaz,Carlos Fermin Fitzacarrald,1.43,77.80,65.50,35.55,17.18
+Ánchaz,Casma,12.83,80.25,79.92,30.53,2.94
+Ánchaz,Corongo,2.62,92.73,89.68,28.83,08.03
+Ánchaz,Huari,2.64,81.50,80.78,32.11,7.87
+Ánchaz,Huarmey,13.38,84.79,83.94,29.45,2.93
+Ánchaz,Huaylas,8.96,93.16,83.96,32.46,17.62
+Ánchaz,Mariscal Luzuriaga,0.57,83.33,69.50,36.54,16.73
+Ánchaz,Ocros,1.76,84.81,68.73,25.64,7.46
+Ánchaz,Pallasca,1.50,87.66,81.37,34.73,11.86
+Ánchaz,Pomabamba,1.62,83.23,67.27,37.96,16.79
+Ánchaz,Recuay,4.26,87.58,79.66,30.27,11.69
+Ánchaz,Santa,30.44,90.56,90.85,32.60,01.08
+Ánchaz,Sihuas,3.49,86.90,77.81,35.65,8.69
+Ánchaz,Yungay,4.33,93.00,79.81,31.65,12.10
+Apurimac,Abancay,18.93,91.56,90.66,38.16,7.75
+Apurimac,Andahuaylas,9.22,88.32,79.09,36.46,13.79
+Apurimac,Antabamba,0.39,93.47,68.90,30.95,28.16
+Apurimac,Aymaraes,2.86,89.70,82.36,29.29,16.03
+Apurimac,Cotabambas,02.01,75.15,68.99,33.94,34.33
+Apurimac,Chincheros,1.73,87.34,74.78,35.41,21.22
+Apurimac,Grau,0.39,91.85,79.16,34.40,21.09
+Arequipa,Arequipa,38.73,88.49,92.15,34.43,0.90
+Arequipa,Camaná,17.22,70.75,89.43,29.31,1.28
+Arequipa,Caraveli,10.70,54.33,87.44,26.60,2.14
+Arequipa,Castilla,11.39,89.30,87.78,28.90,7.30
+Arequipa,caylloma,11.15,90.85,75.37,30.77,6.12
+Arequipa,Condesuyos,5.39,88.38,68.46,24.47,13.81
+Arequipa,Islay,21.12,87.96,89.11,28.43,01.06
+Arequipa,La Unión,1.00,94.80,78.48,30.98,23.82
+Ayacucho,Huamanga,20.47,86.52,86.76,40.34,11.69
+Ayacucho,Cangallo,1.55,92.09,69.71,33.36,32.65
+Ayacucho,Huanca Sancos,0.32,83.68,72.90,33.61,26.37
+Ayacucho,Huanta,6.49,87.30,82.48,36.85,27.04
+Ayacucho,La Mar,2.49,84.81,70.30,33.92,26.00
+Ayacucho,Lucanas,1.94,90.59,75.87,29.67,19.12
+Ayacucho,Páucar del Sara Sara,2.88,93.31,86.71,29.88,19.00
+Ayacucho,Parinacochas,3.40,77.27,85.13,33.35,22.07
+Ayacucho,Sucre,1.99,87.43,80.20,32.27,30.84
+Ayacucho,Víctor Fajardo,1.41,85.96,78.37,29.38,32.10
+Ayacucho,Vilcas Huamán,0.58,80.63,76.34,28.82,29.26
+Cajamarca,Cajamarca,24.04,87.46,86.42,36.11,15.67
+Cajamarca,Cajabamba,5.25,85.91,75.21,33.51,42.85
+Cajamarca,Celendín,4.38,86.43,73.92,34.84,40.95
+Cajamarca,Chota,4.85,73.33,87.77,32.19,29.37
+Cajamarca,Contumazá,4.83,76.22,70.84,28.56,25.58
+Cajamarca,Cutervo,3.73,80.71,73.90,33.57,37.34
+Cajamarca,Hualgayoz,04.05,78.30,88.57,29.75,25.35
+Cajamarca,Jaén,8.65,88.43,80.13,34.17,16.07
+Cajamarca,San Ignacio,2.10,84.18,84.46,35.73,30.80
+Cajamarca,San Marcos,2.60,84.64,79.01,31.30,39.50
+Cajamarca,San Miguel,1.63,91.55,76.35,27.55,34.76
+Cajamarca,San Pablo,03.08,85.98,72.00,31.70,35.94
+Cajamarca,Santa Cruz,2.21,80.60,79.82,30.22,31.96
+Provincia Constitucional del Callao,Callao,44.21,93.63,98.28,32.46,0.5
+Cusco,Cusco,36.95,86.40,96.82,37.68,0.28
+Cusco,Acomayo,0.91,92.22,77.68,38.12,13.96
+Cusco,Anta,5.68,80.87,81.55,32.75,5.86
+Cusco,Calca,5.47,89.99,77.22,34.46,7.33
+Cusco,Canas,0.51,91.93,82.31,35.91,9.96
+Cusco,Canchis,15.04,93.17,82.81,37.12,4.57
+Cusco,Chumbivilcas,01.08,75.41,61.46,35.26,12.11
+Cusco,Espinar,4.51,85.83,61.33,33.68,5.19
+Cusco,La Convención,4.54,92.46,78.06,28.74,3.33
+Cusco,Paruro,01.04,85.72,72.87,31.87,13.58
+Cusco,Paucartambo,1.53,88.12,69.49,38.26,20.73
+Cusco,Quispicanchi,5.28,87.72,78.82,37.58,14.64
+Cusco,Urubamba,12.76,82.14,85.45,33.07,2.26
+Huancavelica,Huancavelica,10.83,90.27,83.87,39.20,10.52
+Huancavelica,Acobamba,2.68,79.25,79.90,35.00,15.71
+Huancavelica,Angares,3.40,86.06,68.20,39.29,16.59
+Huancavelica,Castrovirreyna,0.57,92.34,64.00,33.20,14.25
+Huancavelica,Churcampa,1.13,86.81,76.51,35.96,21.73
+Huancavelica,Huaytará,0.61,84.73,57.29,28.21,21.03
+Huancavelica,Tayacaja,2.54,85.97,81.66,34.32,17.64
+Huanuco,Huánuco,17.45,84.49,83.40,36.31,13.56
+Huanuco,Ambo,5.50,77.85,72.22,30.85,22.72
+Huanuco,Dos de mayo,1.77,87.28,64.67,37.63,20.51
+Huanuco,Huacaybamba,0.79,82.85,76.61,39.83,32.98
+Huanuco,Huamalíes,1.48,86.16,63.93,35.83,18.92
+Huanuco,Leoncio Prado,16.92,85.02,76.47,33.69,9.92
+Huanuco,Marañon,0.94,85.22,54.97,38.88,28.37
+Huanuco,Pachitea,2.73,85.22,57.56,33.79,30.91
+Huanuco,Puerto Inca,1.49,85.37,44.92,31.58,09.07
+Huanuco,Lauricocha,1.22,81.47,49.09,33.95,16.54
+Huanuco,Yarowilca,0.93,86.72,53.43,37.80,21.89
+Ica,Ica,32.64,71.43,91.04,34.45,2.70
+Ica,Chincha,22.23,56.34,91.77,33.84,1.83
+Ica,Nazca,22.21,86.55,85.99,31.34,8.22
+Ica,Palpa,8.79,57.92,83.76,31.00,2.17
+Ica,Pisco,25.84,70.07,91.11,34.03,0.38
+Junin,Huancayo,26.82,83.17,93.11,37.11,1.75
+Junin,Concepcion,9.14,88.99,83.70,33.26,8.30
+Junin,Chanchamayo,9.17,91.26,83.62,32.30,04.04
+Junin,Jauja,8.34,86.14,88.91,32.63,5.83
+Junin,Junín,5.20,93.87,81.61,30.50,11.30
+Junin,Satipo,4.19,88.04,62.64,36.34,4.95
+Junin,Tarma,3.10,88.09,91.02,29.47,7.33
+Junin,Yauli,17.17,88.42,89.39,28.26,1.95
+Junin,Chupaca,7.34,82.81,83.34,33.29,04.09
+La Libertad,Trujillo,41.59,84.54,94.80,33.66,01.09
+La Libertad,Ascope,26.59,77.93,93.31,29.11,1.87
+La Libertad,Bolívar,1.51,88.42,68.78,36.73,41.38
+La Libertad,Chepén,17.14,91.83,92.41,30.28,3.50
+La Libertad,Julcán,2.38,63.09,70.61,31.54,48.66
+La Libertad,Otuzco,02.07,87.39,84.67,29.47,27.67
+La Libertad,Pacasmayo,22.68,73.70,92.51,31.14,2.59
+La Libertad,Pataz,2.60,79.32,70.76,35.70,31.98
+La Libertad,Sanchez Carrión,3.81,66.57,71.81,35.62,27.71
+La Libertad,Santiago de Chuco,2.66,69.14,74.96,33.80,25.23
+La Libertad,Gran Chimú,3.24,62.18,84.45,28.96,23.65
+La Libertad,Virú,12.82,63.96,86.00,31.18,2.76
+Lambayeque,Chiclayo,35.75,93.82,95.65,32.70,0.68
+Lambayeque,Ferreñafe,14.95,91.00,78.67,36.15,16.55
+Lambayeque,Lambayeque,13.90,84.76,85.32,33.48,2.42
+Lima,Barranca,27.21,85.78,84.22,31.69,0.79
+Lima,Cajatambo,01.07,91.91,86.29,31.02,16.41
+Lima,Canta,3.95,81.45,85.87,27.21,3.29
+Lima,Cañete,21.94,80.40,83.82,33.45,0.84
+Lima,Huaral,27.56,86.51,91.89,30.44,01.06
+Lima,Huarochirí,11.74,86.34,81.44,28.82,3.20
+Lima,Huaura,30.74,88.37,89.85,32.96,1.26
+Lima,Oyón,6.41,93.07,83.40,29.15,3.55
+Lima,Yauyos,0.32,89.82,85.64,25.42,10.47
+Loreto,Maynas,20.02,88.43,84.98,36.56,4.85
+Loreto,Alto Amazonas,8.15,76.80,71.59,38.41,20.67
+Loreto,Loreto,2.63,82.35,64.79,41.44,15.11
+Loreto,Mariscal Ramón Castilla,0.97,59.81,60.73,40.10,12.25
+Loreto,Requena,2.62,72.36,70.34,42.61,14.32
+Loreto,Ucayali,2.18,63.67,57.69,46.57,15.39
+Loreto,Datem del Marañon,2.21,87.32,42.18,40.96,15.39
+Loreto,Putumayo,0.99,26.88,43.88,38.24,16.05
+Madre de Dios,Tambopata,19.67,95.04,86.96,36.17,0.14
+Madre de Dios,Manu,2.48,60.57,67.12,30.41,0.11
+Madre de Dios,Tahuamanu,7.66,79.96,82.54,29.08,0.26
+Moquegua,Mariscal Nieto,24.45,93.29,87.85,33.87,1.63
+Moquegua,General Sánchez Cerro,2.50,83.87,57.33,24.97,6.97
+Moquegua,Ilo,31.77,86.11,91.25,33.54,0.31
+Pasco,Pasco,13.21,53.18,86.61,35.13,12.47
+Pasco,Daniel Alcides Carrión,1.42,77.54,68.34,27.47,31.74
+Pasco,Oxapampa,8.33,89.37,67.96,33.24,22.37
+Piura,Piura,24.60,78.44,87.66,34.60,5.78
+Piura,Ayabaca,1.42,86.89,69.77,36.47,29.66
+Piura,Huancabamba,2.84,87.77,72.96,35.39,33.88
+Piura,Morropón,5.75,81.93,65.40,31.30,12.88
+Piura,Paita,14.49,73.41,88.44,34.08,3.42
+Piura,Sullana,18.05,59.09,90.30,32.85,3.27
+Piura,Talara,22.88,26.33,91.20,31.47,1.68
+Piura,Sechura,14.42,26.10,83.23,37.23,3.19
+Puno,Puno,15.31,83.09,77.38,34.98,8.33
+Puno,Azángaro,1.70,88.11,72.56,33.18,18.75
+Puno,Carabaya,1.40,79.65,54.03,32.88,15.31
+Puno,Chuchuito,2.41,83.68,64.40,25.92,16.84
+Puno,El Collao,2.21,88.43,71.58,26.85,14.00
+Puno,Huancané,1.35,82.22,77.71,26.35,17.99
+Puno,Lampa,3.47,89.57,60.36,29.73,13.00
+Puno,Melgar,2.69,89.82,69.33,35.10,15.60
+Puno,Moho,0.51,87.40,77.64,22.90,25.94
+Puno,San Antonio de Putina,1.58,81.98,69.99,25.64,9.37
+Puno,San Román,15.91,88.70,90.67,36.84,4.94
+Puno,Sandia,0.16,77.95,52.33,27.10,10.94
+Puno,Yunguyo,2.39,80.11,81.39,24.18,14.90
+San Martín,Moyobamba,15.32,91.80,88.35,34.30,5.53
+San Martín,Bellavista,9.27,58.68,78.08,33.24,6.68
+San Martín,El dorado,4.80,81.05,77.85,33.96,14.56
+San Martín,Huallaga,3.19,97.71,72.62,31.25,9.68
+San Martín,Lamas,06.04,87.25,83.07,32.63,16.19
+San Martín,Mariscal Cáceres,13.84,91.41,86.29,32.96,4.94
+San Martín,Picota,5.20,66.24,84.55,32.25,9.23
+San Martín,Rioja,9.82,87.91,85.93,34.55,3.82
+San Martín,San Martín,29.70,90.86,84.47,37.79,07.07
+San Martín,Tocache,8.37,81.95,83.30,30.88,6.79
+Tacna,Tacna,31.05,92.47,87.38,33.05,1.18
+Tacna,Candarave,1.79,90.26,76.00,21.93,14.14
+Tacna,Jorge Basadre,18.40,80.56,86.53,26.58,0.52
+Tacna,Tarata,2.27,86.01,70.82,22.80,16.46
+Tumbes,Tumbes,23.45,68.89,91.22,35.11,0.38
+Tumbes,Contralmirante Villar,16.06,12.80,86.86,32.43,0.20
+Tumbes,Zarumilla,16.38,56.61,87.19,34.70,0.24
+Ucayali,Coronel Portillo,19.19,94.06,82.73,35.82,0.50
+Ucayali,Atalaya,3.26,84.09,39.95,38.40,6.17
+Ucayali,Padre Abad,05.03,79.48,75.83,33.36,01.08
+Ucayali,Purús,0.44,100.00,41.58,41.52,1.57

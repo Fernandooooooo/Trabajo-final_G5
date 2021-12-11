@@ -1,0 +1,379 @@
+---
+title: "Trabajo Final Estadística"
+author: "Presentado por Fernando Aliaga, Vanessa Julca y Raiza Mauricio, miembros del grupo 5"
+date: "30/9/2021"
+output: html_document
+---
+
+Trabajo de investigación: La brecha educativa, la otra pandemia
+
+Presentado por: Grupo 5
+Fernando Aliaga (20182142)
+Vanessa Julca (20191465) 
+Raiza Mauricio (20192253)
+
+#### **Presentación**
+
+En este trabajo de investigación explicaremos qué afecta la asistencia a instituciones educativas en el Perú a nivel de sus provincias; según datos del INEI 2017. Por ello, lo que sostenemos a lo largo de esta investigación es que la asistencia a instituciones educativas se verá afectada por el acceso al agua, el acceso a internet, el acceso a la electricidad de alumbrado de red pública y por la condición de pobreza extrema.
+
+En relación al acceso al agua, el trabajo de Gonzales y Vallejos resulta en gran medida pertinente para explicar la relación entre el acceso al agua y la asistencia a instituciones educativas. Las autoras sostienen que la falta de acceso a agua potable contribuye al inadecuado almacenamiento de agua (bidones y tanques) lo cual fomenta la aparición de EDAS e infecciones intestinales, además de la aparición de mosquitos transmisores de dengue, chikungunya y fiebre amarilla. También, al ser un problema en zonas rurales, incrementa la desnutrición, afectando de esta manera al desarrollo cognitivo y académico. (Gonzales y Vallejos, 2020).
+
+A pesar de los esfuerzos por mejorar las políticas educativas implementadas por los gobiernos, la brecha de desigualdad en la educación digital se encuentra latente. El problema de la labor educativa resaltó durante la crisis por el covid-19, se vio reflejada no solo en la crisis sanitaria sino también en la sociedad digital. Muchos educandos se vieron perjudicados por la brecha digital, desnudando así las muchas carencias que existen en el Perú a nivel educativo. El estudio realizado por Tarazona evidenció que el nivel económico, la ubicación geográfica, entre otros, fueron determinantes durante la educación virtual para que los alumnos se vean afectados; con ello, se considera que la tecnología y conexión a internet son sumamente importantes para el cierre de la brecha digital en Perú (Tarazona, 2021).
+
+El concepto de condición de pobreza está basado en el trabajo titulado "Acumulación de desventajas: el tránsito de los jóvenes rurales a la educación superior" (2018) por los autores Alvaro Grompone, Luciana Reátegui y Mauricio Rentería. En líneas generales, la investigación se acerca a comprender las principales condiciones que influyen en la transición hacia la educación superior en jóvenes de zonas rurales, específicamente centran su estudio cualitativo y de métodos participativos en el distrito de Tullpa, y en la región de Ayacucho en general. En ese sentido, los autores identifican que el acceso a la educación universitaria y técnica muestra evidentes desigualdades vinculadas al entorno familiar. El paper explica que uno de los principales hallazgos es que el trabajo es un factor importante que condiciona la vida cotidania y académica de los jóvenes ayacuchanos. En otras palabras, esto se puede evideciar mejor en las familias, en las cuales el ingreso económico familiar depende considerablemente del aporte ecónomico de dichos jóvenes, y esto está relacionado inherentemente con la condición de pobreza que utilizamos, porque podemos apreciar que si estas familias no cuentan los medios económicos es muy dificil que el joven pueda acceder a una educacion superior por la carga economica que debe afrontar para que su familia pueda obtener lo mínimo para que pueda subsistir, incluso sin todavia ingresar a la universidad, el trabajo de estos jóvenes condiciona su rendimiento acádemico y su asistencia a las instituciones educativas escolares, porque los rangos de horarios de trabajo son complicados que incluso, en algunos casos, son de madrugada. En ese sentido, no es sorpresa que el paper para su caso de estudio nos detalle que en los jóvenes ayacuchanos un 89.1% tiene un trabajo dependiente sin contrato con un rango de promedio mensual de 510 soles. Además, un 80.3% de jóvenes entre 17 y 24 años no asiste a ningún centro de educación superior. Finalmente, el índice de pobreza para el distrito de Tullpa alcanza el 62.5% y para las provincias en general de Ayacucho alcanza un 62.6% de pobreza.
+
+Finalmente, obtuvimos los datos de las variables, agua, internet, electricidad, acesso a educación (básica, técnica y superior), todas obtenidas del portal del REDATAM (<https://censos2017.inei.gob.pe/redatam/>). En cuanto a los datos de pobreza extrema utilizamos la data encontrada en el siguiente repositorio de Github (<https://github.com/Alexanderbenit7/Test/blob/master/ceplan.xlsx?raw=true>). Posteriormente, agrupamos los datos relevantes para esta investaigacion en un hoja de cálculo en excel (<https://docs.google.com/spreadsheets/d/e/2PACX-1vR52Jt9iJ87LzrAkUXSw0qPYuLYwV7Qs56rVGbUwJ55LRdn6xtx1BnWp6SlMKmr80poqtnr40js_T44/pub?output=csv>)
+
+Los datos están organizados asÍ:
+
+```{r}
+link="https://docs.google.com/spreadsheets/d/e/2PACX-1vR52Jt9iJ87LzrAkUXSw0qPYuLYwV7Qs56rVGbUwJ55LRdn6xtx1BnWp6SlMKmr80poqtnr40js_T44/pub?output=csv"
+
+DataCenso=read.csv(link, stringsAsFactors = F)
+```
+
+```{r}
+str(DataCenso)
+names(DataCenso) = c("Departamento", "Provincia", "Internet", "Agua", "Electricidad", "Educación", "Pobreza_extrema")
+```
+
+MetaData:
+
+**Departamento:** Los departamentos del Perú
+
+**Provincia:** Las provincias de cada departamento del Perú.
+
+**Internet:** Porcentaje del acceso a internet por cada provincia del país.
+
+**Agua:** Porcentaje del acceso a servicio agua por cada provincia del país.
+
+**Electricidad:** Porcentaje del acceso al alumbrado público por cada provincia del país.
+
+**Educación:** Porcentaje de asistencia a instituciones educativas (básica, técnica y superior) por cada provincia del país.
+
+**Pobreza Extrema:** Porcentaje de pobreza extrema por cada provincia del país.
+
+Situación Provincial
+
+Veamos la situacion regional desde el compartaimeinto de las variables independientes utilizando analisis de clusters, siguiendo la tecnica de estrategia de partición.
+
+```{r}
+link="https://docs.google.com/spreadsheets/d/e/2PACX-1vR52Jt9iJ87LzrAkUXSw0qPYuLYwV7Qs56rVGbUwJ55LRdn6xtx1BnWp6SlMKmr80poqtnr40js_T44/pub?output=csv"
+
+DataCenso=read.csv(link, stringsAsFactors = F)
+
+str(DataCenso)
+
+names(DataCenso) = c("Departamento", "Provincia", "Internet", "Agua", "Electricidad", "Educación", "Pobreza_extrema")
+
+#Variables a seleccionar 
+
+dataClus=DataCenso[,c("Internet","Agua","Electricidad","Pobreza_extrema")]
+```
+
+Revisemos los rangos de la data numérica
+
+```{r}
+summary(dataClus)
+```
+
+Posteriormente, obtendremos los 2 clusters sugeridos por la técnica de estrategia de partición (Ver anexo 1)
+
+```{r}
+library(cluster)
+g.dist = daisy(dataClus, metric="gower")
+```
+
+```{r}
+set.seed(123)
+library(factoextra)
+
+pam.resultado=pam(g.dist,2,cluster.only = F)
+
+
+dataClus$clustPT=pam.resultado$cluster
+
+```
+
+
+Para cada cluster, este es el comportamiento de las variables numericas:
+
+```{r}
+library(plyr)
+
+aggregate(cbind(Internet,Agua,Electricidad,Pobreza_extrema) ~ clustPT, data=dataClus,mean)
+```
+
+Podemos recodificar estas variables, pero en este caso no hay necesidad de recodificar.
+
+# **Preparación de latentes**
+Según nuestro marco teórico hemos decidido agrupar nuestros datos en una latente llamada "Acceso_educa" (ver anexo 2).
+
+```{r}
+model <- ' Acceso_educa =~ Agua + Electricidad + Internet + Pobreza_extrema'
+```
+
+Ahora vemos qué arroja el modelo:
+```{r}
+library(lavaan)
+dontselect=c("Departamento","Provincia", "Educación")
+select=setdiff(names(DataCenso),dontselect) 
+data_latente=DataCenso[,select] 
+```
+
+
+```{r}
+cfa_fit <- cfa(model, data=data_latente, 
+           std.lv=TRUE,  
+           missing="fiml")
+```
+
+Preparo las pruebas:
+```{r}
+allParamCFA=parameterEstimates(cfa_fit,standardized = T)
+allFitCFA=as.list(fitMeasures(cfa_fit))
+```
+
+Veamos los resultados:
+Si cada indicador tiene una buena conexión con su latente
+
+```{r}
+allParamCFA[allParamCFA$op=="=~",c("lhs","rhs","pvalue","std.all")]
+
+```
+
+Averiguemos qué tan bien salió el modelo.
+
+El ChiSquare es NO significativo? SÍ
+
+```{r}
+
+allFitCFA[c("chisq", "df", "pvalue")]
+
+```
+
+El Índice Tucker Lewi es mayor a 0.9? SÍ
+
+```{r}
+allFitCFA$tli
+```
+
+La Raíz del error cuadrático medio de aproximación es menor a 0.05? SÍ
+
+```{r}
+allFitCFA[c('rmsea.ci.lower','rmsea' ,'rmsea.ci.upper')]
+
+```
+
+Cuáles son los scores:
+```{r}
+lavPredict(cfa_fit)
+```
+
+# **Regresión y prueba de hipotesis**
+
+```{r}
+modelo1=formula(Educación~Internet+Agua+Electricidad+Pobreza_extrema)
+
+reg1=lm(modelo1,data=DataCenso)
+summary(reg1)
+```
+La regresión lineal es válida (menor 0.05) y explica un 12% según el R cuadrado ajustado. El resultado de la regresión nos muestra que la asistencia a instituciones educativas se ve afectada directamente por el acceso a internet y la pobreza extrema. Por otro lado, la variable acceso al agua no es significativa. Finalmente, observamos que la variable acceso a la electrivcidad de alumbrado de la red pública es inversamente proporcional y significativo.
+
+# **Conclusiones**
+En este trabajo se planteó la siguiente hipotesis:
+
+La asistencia a instituciones educativas se verá afectada por el acceso al agua, el acceso a internet, el acceso a la electricidad de alumbrado de red pública y por la condición de pobreza extrema.
+
+A lo largo del trabajo se pudo comprobar que no todas las variables explicaban de la misma manera lo planteado. Se encontró que el acceso a agua no afecta la asistencia a instituciones educativas. Por otro lado, observamos que el acceso a internet y la condición de pobreza extrema resultaron significativos para explicar la asistencia de los alumnos. Existe una relación inversamente proporcional con el acceso a electricidad, de igual manera es significativo.
+
+Estos significaría que el acceso a educación no necesariamente se ve afectado por el acceso a servicios básicos como el agua o electricidad. Sin embargo, admitimos la postura de Tarazona al resaltar la importancia del acceso a internet y así romper con la brechas digitales existentes en el Perú en el sector educación.
+Con respecto a la condición de pobreza, observamos que en el análisis factorial los resultados que arroja  este indicador no son tan significativos, porque es menor que 0.6. Es decir, esto significa que no hay información consistente con respecto a los datos de pobreza extrema. 
+
+En futuras investigaciones sería interesante plantear y ver la relevancia del factor psicológico, pues el entorno en el que vive el alumno cobra vital importancia condicionando de manera negativa su rendimiento académico.
+Provocando que este último a causa del factor psicológico, repercute a la no asistencia o incluso deserción de la institución educativa. 
+
+# **ANEXOS**
+
+## **Anexo 1: Exploración de clusters:**
+
+La data para cluster:
+
+1.  Saber si se transformará las variables numéricas:
+
+-   Sin modificación:
+
+```{r}
+boxplot(DataCenso[,-c(1,2,6)],horizontal=T,las=2,cex.axis=0.3)
+```
+
+Tipificado:
+
+```{r}
+boxplot(scale(DataCenso[,-c(1,2,6)]),horizontal=T,las=2,cex.axis=0.3)
+```
+
+Suavizado logarítmicamente:
+
+```{r}
+boxplot(log(DataCenso[,-c(1,2,6)]),horizontal=T,las=2,cex.axis=0.3)
+```
+
+2\. Saber cuántos clusters pedir
+```{r}
+library(cluster)
+g.dist = daisy(dataClus, metric="gower")
+
+```
+
+\#Para PAM
+
+```{r}
+library(factoextra)
+fviz_nbclust(dataClus[,c(1:4)], pam,diss=g.dist,method = "gap_stat",k.max = 10,verbose = F)
+```
+
+\#Para agnes
+
+```{r}
+fviz_nbclust(dataClus[,c(1:4)], hcut,diss=g.dist,method = "gap_stat",k.max = 10,verbose = F,hc_func = "agnes")
+
+```
+
+\#Para Diana
+
+```{r}
+fviz_nbclust(dataClus[,c(1:4)], hcut,diss=g.dist,method = "gap_stat",k.max = 10,verbose = F,hc_func = "diana")
+
+```
+
+```{r}
+set.seed(123)
+SUGERIDOS= 2
+res.pam=pam(g.dist,k = SUGERIDOS,cluster.only = F)
+dataClus$pam=res.pam$cluster
+res.agnes <- hcut(g.dist, k = SUGERIDOS,hc_func='agnes')
+dataClus$agnes=res.agnes$cluster
+res.diana <- hcut(g.dist, k = SUGERIDOS,hc_func='diana')
+dataClus$diana=res.diana$cluster
+
+```
+
+```{r}
+fviz_silhouette(res.pam)
+```
+
+```{r}
+fviz_silhouette(res.agnes)
+```
+
+```{r}
+fviz_silhouette(res.diana)
+```
+
+## **Anexo 2: Exploración de latentes:**
+
+## EFA - Proceso de análisis factorial explotario 
+
+1.  Calculando matriz de correlación:
+
+    ```{r}
+    dontselect=c("Departamento","Provincia", "Educación")
+    select=setdiff(names(DataCenso),dontselect) 
+    data_latente=DataCenso[,select] 
+
+    library(polycor)
+    corMatrix=polycor::hetcor(data_latente)$correlations
+
+    ```
+
+2.  Explorar correlaciones - Sin evaluar significancia:
+
+```{r}
+library(ggcorrplot)
+ggcorrplot(corMatrix)
+```
+
+3.  Verificar si datos permiten factorizar:
+    ```{r}
+    library(psych)
+    psych::KMO(corMatrix)
+    ```
+
+4.  Verificar si la matriz de correlaciones es adecuada
+MATRIZ DE IDENTIDAD
+```{r}
+ cortest.bartlett(corMatrix,n=nrow(data_latente))$p.value>0.05
+```
+
+MATRIZ SINGULAR
+```{r}
+library(matrixcalc)
+is.singular.matrix(corMatrix)
+```
+
+5.  Determinar en cuantos factores o variables latentes podríamos redimensionar la data:
+
+```{r}
+fa.parallel(data_latente,fm = 'ML', fa = 'fa',correct = T)
+```
+
+Se sugiere 2, pero esperábamos 1 latente. Tratemos con 1 porque en esta única latente se busca explicar el acceso educación; a través, de los indicadores acceso a agua, internet, pobreza, electricidad.
+
+6.  Redimensionar a número menor de factores
+
+Resultado inicial:
+
+```{r}
+library(GPArotation)
+resfa <- fa(data_latente,
+            nfactors = 1,
+            cor = 'mixed',
+            rotate = "varimax",
+            fm="minres")
+```
+
+```{r}
+print(resfa$loadings)
+```
+
+```{r}
+fa.diagram(resfa)
+```
+¿Qué variables aportaron más a los factores?
+```{r}
+sort(resfa$communality)
+```
+
+La exploración solo da soporte a una latente. Vemos que las variables que no aporta más a la latentes Agua. La que más aporta es la variable Internet con 0.8. Con respecto a Pobrez_extrema y Electricidad están en la línea meadia.
+
+## **Anexo 3: Códigos utilizados:**
+Se han usado las siguientes librerias, indicando la razón de su uso:
+
+library(cluster): Utilizamos esta librería para la función daisy, para analizar la matriz de distancia.
+
+library(plyr): La utilizamos para la función each, la cual nos muestra las características del acceso a las variables al aplicar aggregate.
+
+library(factoextra): La utilizamos para la sugerencia de la cantidad de clusters.
+
+library(lavaan): La empLeamos al momento de normalizar variables, para modelar la variable latente.
+
+library(polycor): Nos sirve para analizar y calcular la matriz de correlación.
+
+library(ggcorrplot): La utilizamos para explorar la matriz de correlación de manera visual y hacerlo más fácilmente.
+
+library(psych): NOs permite ver si los datos se permiten factorizar.
+
+library(matrixcalc): Para ver si la matriz de correlación es la adecuada, según matriz singular.
+
+library(GPArotation): La empleamos para redimensionar el número de factores.
+
+## **Anexo 4: Bibliografía:**
+Grompone, A., Reátegui, L., & Rentería, M. (2018, agosto). Acumulación de desventajas: el tránsito de los jóvenes rurales a la educación superior. SEPIA XVII. PERÚ: El problema agrarario en debate., XVII. 
+
+Gonzales, L.A. (2020). Efectos Sociales del Desabastecimiento en Agua Potable y Saneamiento Básico. Tesis de grado de Bachiller en Ingeniería Económica y Empresarial. Universidad Tecnológica del Perú, Lima, Perú.
+
+Tarazona, C. N. (2021). Tensiones Respecto a la Brecha Digital en la Educación Peruana. Revista peruana de investigación e innovación educativa, 1(2), e21039-e21039.
+
+
+
